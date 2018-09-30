@@ -1,0 +1,35 @@
+{
+  "manifest_version": 2,
+  "name": "Facebook Counter",
+  "version": "1.0.0",
+  "description": "Facebook Counter",
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "16": "img/icon.png",
+      "24": "img/icon.png",
+      "32": "img/icon.png"
+    },
+    "default_title": "Facebook Counter",
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*"
+      ],
+      "js": [
+        "js/jquery.js",
+        "js/content.js"
+      ]
+    }
+  ],
+  "permissions": [
+    "tabs",
+    "storage"
+  ]
+}
